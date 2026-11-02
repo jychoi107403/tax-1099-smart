@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://1099tax.bangjang.net/sitemap.xml
+
