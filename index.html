@@ -12,6 +12,9 @@
       gtag('config', 'G-ZS5PRJ8F1H');
     </script>
 
+    <!-- 구글 서치 콘솔 (Google Search Console 사이트 소유권 확인 메타태그) -->
+    <meta name="google-site-verification" content="google8dfc27124880d18e" />
+
     <!-- 브라우저 탭 아이콘 (서류가방 모양 SVG 파비콘) -->
     <link
       rel="icon"
@@ -69,21 +72,68 @@
       content="Free US 1099 freelancer, gig worker, and independent contractor quarterly tax calculator."
     />
 
-    <!-- 구글 구조화 데이터 (JSON-LD: 검색 결과에 금융 웹앱 정보 표시) -->
+    <!-- 구글 구조화 데이터 (JSON-LD: WebApplication + Organization 7개 네트워크 + FAQ 리치 스니펫) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "Tax1099Smart US 1099 Self-Employment & Quarterly Tax Calculator",
-        "url": "https://1099tax.bangjang.net/",
-        "description": "Free 2026 US 1099 self-employment tax, business write-off, QBI deduction, and quarterly estimated tax calculator covering all 50 states and DC.",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "All",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        }
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Tax1099Smart US 1099 Self-Employment & Quarterly Tax Calculator",
+            "url": "https://1099tax.bangjang.net/",
+            "description": "Free 2026 US 1099 self-employment tax, business write-off, QBI deduction, and quarterly estimated tax calculator covering all 50 states and DC.",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "All",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "Organization",
+            "name": "US Smart Finance Network",
+            "url": "https://1099tax.bangjang.net/",
+            "sameAs": [
+              "https://mortgage.bangjang.net",
+              "https://paycheck.bangjang.net",
+              "https://autoloan.bangjang.net",
+              "https://1099tax.bangjang.net",
+              "https://401k.bangjang.net",
+              "https://heloc.bangjang.net",
+              "https://rentalroi.bangjang.net"
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much should a 1099 independent contractor set aside for taxes in 2026?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most 1099 freelancers and independent contractors should set aside 25% to 30% of their net Schedule C profit to cover the 15.3% Federal Self-Employment (SE) tax plus Federal and State income taxes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is the 15.3% self-employment tax calculated?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The IRS applies the 15.3% self-employment tax rate (12.4% Social Security up to the annual wage base plus 2.9% Medicare) to 92.35% of your net Schedule C business profit. You can also deduct 50% of your SE tax from your Adjusted Gross Income (AGI)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When are 2026 IRS quarterly estimated tax payments due?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "IRS Form 1040-ES quarterly estimated tax deadlines are April 15 (Q1), June 15 (Q2), September 15 (Q3), and January 15 of the following year (Q4)."
+                }
+              }
+            ]
+          }
+        ]
       }
     </script>
   </head>
@@ -92,4 +142,3 @@
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
